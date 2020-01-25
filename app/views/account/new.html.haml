@@ -114,22 +114,30 @@
           .app_new__contents__right__bottom__contents__spending__title
             費用
           .app_new__contents__right__bottom__contents__spending__form
-            .app_new__contents__right__bottom__contents__spending__form__expense
-              %input.app_new__contents__right__bottom__contents__spending__form__expense__form{:name => "", :placeholder => "費目を選択", :type => "text", :value => ""}/
-            .app_new__contents__right__bottom__contents__spending__form__amount
-              %input.app_new__contents__right__bottom__contents__spending__form__amount__form{:name => "", :placeholder => "金額を入力", :type => "text", :value => ""}/
-            .app_new__contents__right__bottom__contents__spending__form__submit
-              %input.app_new__contents__right__bottom__contents__spending__form__submit__button{:name => "", :placeholder => "", :type => "button", :value => "登録"}/
-          
+            = form_with(model: @expenditure, url: "/account/expenditure_create", local: true) do |f|
+              .app_new__contents__right__bottom__contents__spending__form__expense
+                = f.text_field :expsubject, placeholder: "費目を入力", class:"app_new__contents__right__bottom__contents__spending__form__expense__form"
+                -# %input.app_new__contents__right__bottom__contents__spending__form__expense__form{:name => "", :placeholder => "費目を選択", :type => "text", :value => ""}/
+              .app_new__contents__right__bottom__contents__spending__form__amount
+                = f.text_field :expamount, placeholder: "金額をを入力", class:"app_new__contents__right__bottom__contents__spending__form__amount__form"
+                -# %input.app_new__contents__right__bottom__contents__spending__form__amount__form{:name => "", :placeholder => "金額を入力", :type => "text", :value => ""}/
+              .app_new__contents__right__bottom__contents__spending__form__submit
+                =f.submit class: "app_new__contents__right__bottom__contents__spending__form__submit__button", value: "登録" ;
+                -# %input.app_new__contents__right__bottom__contents__spending__form__submit__button{:name => "", :placeholder => "", :type => "button", :value => "登録"}/
+            
         .app_new__contents__right__bottom__contents__income
           .app_new__contents__right__bottom__contents__income__title
             収入
           .app_new__contents__right__bottom__contents__income__form
-            .app_new__contents__right__bottom__contents__income__form__item
-              %input.app_new__contents__right__bottom__contents__income__form__item__form{:name => "", :placeholder => "収入を選択", :type => "text", :value => ""}/
-            .app_new__contents__right__bottom__contents__income__form__amount
-              %input.app_new__contents__right__bottom__contents__income__form__amount__form{:name => "", :placeholder => "金額を入力", :type => "text", :value => ""}/
-            .app_new__contents__right__bottom__contents__income__form__submit
-              %input.app_new__contents__right__bottom__contents__income__form__submit__button{:name => "", :placeholder => "費目", :type => "submit", :value => "登録"}/
+            = form_with(model: @income, url: "/account/income_create", local: true) do |f|
+              .app_new__contents__right__bottom__contents__income__form__item
+                = f.text_field :incsubject, placeholder: "収入を入力", class:"app_new__contents__right__bottom__contents__income__form__item__form"
+                -# %input.app_new__contents__right__bottom__contents__income__form__item__form{:name => "", :placeholder => "収入を選択", :type => "text", :value => ""}/
+              .app_new__contents__right__bottom__contents__income__form__amount
+                = f.text_field :incamount, placeholder: "金額を入力", class:"app_new__contents__right__bottom__contents__income__form__amount__form"
+                -# %input.app_new__contents__right__bottom__contents__income__form__amount__form{:name => "", :placeholder => "金額を入力", :type => "text", :value => ""}/
+              .app_new__contents__right__bottom__contents__income__form__submit
+                =f.submit class: "app_new__contents__right__bottom__contents__income__form__submit__button", value: "登録" ;
+                -# %input.app_new__contents__right__bottom__contents__income__form__submit__button{:name => "", :placeholder => "費目", :type => "submit", :value => "登録"}/
 
 
