@@ -13,19 +13,31 @@
         .app_new__contents__left__total__income__left
           収入合計
         .app_new__contents__left__total__income__right
-          ¥ 80000 円
+          ¥
+          = @inc_all_sum
+          円
 
       .app_new__contents__left__total__spending
         .app_new__contents__left__total__spending__left
           費用合計
         .app_new__contents__left__total__spending__right
-          ¥ 80000 円
+          ¥
+          = @exp_all_sum
+          円
 
       .app_new__contents__left__total__profit
         .app_new__contents__left__total__profit__left
           損益
-        .app_new__contents__left__total__profit__right
-          ¥ 80000 円
+        - if @profit >= 0
+          .app_new__contents__left__total__profit__right
+            ¥
+            = @profit
+            円
+        - else
+          .app_new__contents__left__total__profit__right--red
+            ¥
+            = @profit
+            円
 
 
 
@@ -39,55 +51,73 @@
           .app_new__contents__right__list__expense
             食費
           .app_new__contents__right__list__amount
-            ¥10000円
+            ¥
+            = @food_sum
+            円
 
         .app_new__contents__right__list__daily-necess
           .app_new__contents__right__list__expense
             日用品費
           .app_new__contents__right__list__amount
-            ¥10000円
+            ¥
+            = @daily_necces_sum
+            円
 
         .app_new__contents__right__list__utility
           .app_new__contents__right__list__expense
             水道光熱費
           .app_new__contents__right__list__amount
-            ¥10000円
+            ¥
+            = @utility_sum
+            円
 
         .app_new__contents__right__list__billing
           .app_new__contents__right__list__expense
             課金
           .app_new__contents__right__list__amount
-            ¥10000円
+            ¥
+            = @billing_sum
+            円
 
         .app_new__contents__right__list__entertainment
           .app_new__contents__right__list__expense
             娯楽費
           .app_new__contents__right__list__amount
-            ¥10000円
+            ¥
+            = @entertainment_sum
+            円
         
         .app_new__contents__right__list__rent
           .app_new__contents__right__list__expense
             家賃
           .app_new__contents__right__list__amount
-            ¥10000円
+            ¥
+            = @rent_sum
+            円
 
         .app_new__contents__right__list__mobile
           .app_new__contents__right__list__expense
             通信費
           .app_new__contents__right__list__amount
-            ¥10000円
+            ¥
+            = @mobile_sum
+            円
 
         .app_new__contents__right__list__scholarship
           .app_new__contents__right__list__expense
             奨学金
           .app_new__contents__right__list__amount
-            ¥10000円
+            ¥
+            = @scholarship_sum
+            円
 
         .app_new__contents__right__list__others
           .app_new__contents__right__list__expense
             その他
           .app_new__contents__right__list__amount
-            ¥10000円
+            ¥
+            = @others_sum
+            円
 
       .app_new__contents__right__title__income
         収入
@@ -97,13 +127,17 @@
           .app_new__contents__right__list__expense
             給与
           .app_new__contents__right__list__amount
-            ¥10000円
+            ¥
+            = @salary_sum
+            円
 
         .app_new__contents__right__list__income__other
           .app_new__contents__right__list__expense
             雑益
           .app_new__contents__right__list__amount
-            ¥10000円
+            ¥
+            = @inc_others_sum
+            円
   
     .app_new__contents__right__bottom
       .app_new__contents__right__bottom__title
