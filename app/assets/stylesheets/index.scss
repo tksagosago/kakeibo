@@ -1,0 +1,14 @@
+body{
+  height: 100%;
+  width: 100%;
+}
+
+.app_header{
+  height: 80px;
+  background-color: orange;
+  padding: 10px;
+  &__text{
+    font-size: 30px;
+    line-height: 80px;
+  }
+}
