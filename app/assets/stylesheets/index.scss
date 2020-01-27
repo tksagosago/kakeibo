@@ -6,9 +6,42 @@ body{
 .app_header{
   height: 80px;
   background-color: orange;
-  padding: 10px;
+  padding: 10px 50px;
+  display: flex;
+  justify-content: space-between;
   &__text{
     font-size: 30px;
     line-height: 80px;
+  }
+  &__link{
+    font-size: 20px;
+    line-height: 80px;
+  }
+  a{
+    color: rgb(124, 124, 241);
+  }
+}
+
+.app_contents{
+  padding: 30px;
+  &__main{
+    width: 50%;
+    margin: 0 auto;
+    &__title{
+      font-size: 35px;
+      text-align: center;
+    }
+    &__contents{
+      padding: 0px 50px;
+      &__list{
+        margin: 20px 20px;
+        float: left;
+        font-size: 20px;
+        text-align: center;
+      }
+      a{
+        color: brown;
+      }
+    }
   }
 }
