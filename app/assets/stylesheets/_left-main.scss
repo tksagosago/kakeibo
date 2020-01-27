@@ -1,0 +1,59 @@
+.app_new__contents{
+  display: flex;
+  padding: 30px;
+  &__left{
+    width: 40%;
+    height: 100%;
+    &__period{
+      font-size: 30px;
+      color: brown;
+      margin-bottom: 15px;
+    }
+    &__graph{
+      height: 400px;
+      width: 400px;
+      margin-left: 40px;
+    }
+    &__total{
+      font-size: 40px;
+      padding-top: 30px;
+      &__spending{
+        display: flex;
+        justify-content: space-between;
+        border-bottom: 1px solid rgb(155, 152, 152);
+        widows: 25%;
+        &__left{
+          margin-left: 20px;
+        }
+        &__right{
+          margin-right: 60px;
+        }
+      }
+      &__income{
+        display: flex;
+        justify-content: space-between;
+        &__left{
+          margin-left: 20px;
+        }
+        &__right{
+          margin-right: 60px;
+        }
+      }
+      &__profit{
+        display: flex;
+        justify-content: space-between;
+        &__left{
+          margin-left: 20px;
+        }
+        &__right{
+          margin-right: 60px;
+          color: rgb(74, 83, 219);
+        }
+        &__right--red{
+          margin-right: 60px;
+          color: rgb(230, 86, 61);
+        }
+      }
+    }
+  }
+}

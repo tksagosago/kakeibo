@@ -1,0 +1,36 @@
+.app_new__contents__left
+  .app_new__contents__left__period
+    = @now.strftime("%Y年　%m月")
+  .app_new__contents__left__graph
+    = pie_chart @exp_graph_data, height: "400px"
+
+  .app_new__contents__left__total
+    .app_new__contents__left__total__income
+      .app_new__contents__left__total__income__left
+        収入合計
+      .app_new__contents__left__total__income__right
+        ¥
+        = @inc_all_sum
+        円
+
+    .app_new__contents__left__total__spending
+      .app_new__contents__left__total__spending__left
+        費用合計
+      .app_new__contents__left__total__spending__right
+        ¥
+        = @exp_all_sum
+        円
+
+    .app_new__contents__left__total__profit
+      .app_new__contents__left__total__profit__left
+        損益
+      - if @profit >= 0
+        .app_new__contents__left__total__profit__right
+          ¥
+          = @profit
+          円
+      - else
+        .app_new__contents__left__total__profit__right--red
+          ¥
+          = @profit
+          円

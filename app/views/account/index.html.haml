@@ -12,7 +12,7 @@
       過去データ
     .app_contents__main__contents
       - @monthly.each do |monthly|
-        - if monthly.created_at != @now
+        - if monthly.created_at != @now.all_month
           .app_contents__main__contents__list
             = link_to account_path(monthly.created_at) do
               = monthly.created_at.strftime("%Y年%m月")

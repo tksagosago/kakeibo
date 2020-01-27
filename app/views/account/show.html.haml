@@ -5,5 +5,8 @@
     = link_to root_path do
       一覧へ戻る
 
+.app_new__contents
+  = render partial: 'left-main'
 
-= render partial: 'main'
+  .app_new__contents__right
+    = render partial: 'right-main'

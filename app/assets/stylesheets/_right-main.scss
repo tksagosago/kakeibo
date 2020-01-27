@@ -1,0 +1,85 @@
+.app_new__contents{
+  &__right{
+    padding: 0px 30px;
+    width: 60%;
+    &__contents{
+      display: flex;
+    }
+    &__title{
+      font-size: 30px;
+    }
+    &__list{
+      font-size: 20px;
+      width: 40%;
+      &__food{
+        display: flex;
+        justify-content: space-between;
+        margin: 5px;
+      }
+      &__daily-necess{
+        display: flex;
+        justify-content: space-between;
+        margin: 5px;
+      }
+      &__utility{
+        display: flex;
+        justify-content: space-between;
+        margin: 5px;
+      }
+      &__billing{
+        display: flex;
+        justify-content: space-between;
+        margin: 5px;
+      }
+      &__entertainment{
+        display: flex;
+        justify-content: space-between;
+        margin: 5px;
+      }
+      &__rent{
+        display: flex;
+        justify-content: space-between;
+        margin: 5px;
+      }
+      &__mobile{
+        display: flex;
+        justify-content: space-between;
+        margin: 5px;
+      }
+      &__scholarship{
+        display: flex;
+        justify-content: space-between;
+        margin: 5px;
+      }
+      &__others{
+        display: flex;
+        justify-content: space-between;
+        margin: 5px;
+      }
+      &__expense{
+        margin-left: 30px;
+      }
+      &__amount{
+        margin-left: 80px;
+      }
+    }
+    &__title__income{
+      font-size: 30px;
+      margin-left: 20px;
+    }
+    &__list__income{
+      width: 40%;
+      font-size: 20px;
+      &__salary{
+        display: flex;
+        justify-content: space-between;
+        margin: 5px;
+      }
+      &__other{
+        display: flex;
+        justify-content: space-between;
+        margin: 5px;
+      }
+    }
+  }
+}
