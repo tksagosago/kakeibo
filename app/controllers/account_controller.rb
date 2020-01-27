@@ -1,5 +1,7 @@
 class AccountController < ApplicationController
   before_action :set_date, only: [:new, :index]
+  before_action :set_date_past, only: [:show]
+  before_action :set_data, only: [:new, :show]
 
   def index
     @monthly = Expenditure.group("DATE_FORMAT(created_at, '%Y%m')")
@@ -8,6 +10,49 @@ class AccountController < ApplicationController
   def new
     @incomes      = Income.new
     @expenditures = Expenditure.new
+  end
+
+
+  def expenditure_create
+    @expenditure = Expenditure.create(expenditure_params)
+    if @expenditure.save
+      redirect_to new_account_path
+    else
+      render action: :new
+    end
+  end
+
+  def income_create
+    @income = Income.create(income_params)
+    if @income.save
+      redirect_to new_account_path
+    else
+      render action: :new
+    end
+  end
+
+  def show
+  end
+
+
+  private
+  def income_params
+    params.permit(:incsubject, :incamount)
+  end
+
+  def expenditure_params
+    params.permit(:expsubject, :expamount)
+  end
+
+  def set_date
+    @now = Time.current
+  end
+
+  def set_date_past
+    @now = Time.parse(params[:id])
+  end
+
+  def set_data
     @exp_graph_data = []
 
     @billing = Expenditure.where(expsubject: "課金", created_at: @now.all_month)
@@ -107,43 +152,6 @@ class AccountController < ApplicationController
     end
 
     @profit = @inc_all_sum - @exp_all_sum
-    
-  end
-
-
-  def expenditure_create
-    @expenditure = Expenditure.create(expenditure_params)
-    if @expenditure.save
-      redirect_to new_account_path
-    else
-      render action: :new
-    end
-  end
-
-  def income_create
-    @income = Income.create(income_params)
-    if @income.save
-      redirect_to new_account_path
-    else
-      render action: :new
-    end
-  end
-
-  def show
-  end
-
-
-  private
-  def income_params
-    params.permit(:incsubject, :incamount)
-  end
-
-  def expenditure_params
-    params.permit(:expsubject, :expamount)
-  end
-
-  def set_date
-    @now = Time.current
   end
 
 end
