@@ -34,9 +34,6 @@ class AccountController < ApplicationController
   def show
   end
 
-  def show_other
-  end
-
 
   private
   def income_params
