@@ -1,6 +1,38 @@
 .app_new__contents{
   display: flex;
   padding: 30px;
+  position: relative;
+  &__right__calc{
+    margin-top: 60px;
+    padding: 20px;
+    border: 1px solid black;
+    &__title{
+      font-size: 30px;
+      font-weight: bold;
+      margin-bottom: 10px;
+      text-align: center;
+      color: coral;
+    }
+    &__forms{
+      &__input1{
+        height: 30px;
+        width: 250px;
+        padding: 5px;
+        margin: 0px 0px 10px 10px;
+      }
+      &__input2{
+        height: 30px;
+        width: 250px;
+        padding: 5px;
+        margin: 0px 0px 10px 10px;
+      }
+      &__output{
+        border-top: 1px solid black;
+        text-align: center;
+        font-size: 30px;
+      }
+    }
+  }
   &__right__bottom{
     right: 40%;
     margin-top: 20px;
