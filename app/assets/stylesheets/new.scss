@@ -65,6 +65,18 @@
               width: 200px;
             }
           }
+          &__other{
+            margin-bottom: 20px;
+            &__form{
+              padding: 10px;
+              width: 200px;
+            }
+            .hidden{
+              display: none;
+              padding: 10px;
+              width: 200px;
+            }
+          }
           &__submit{
             height: 50px;
             margin-left: 10px;

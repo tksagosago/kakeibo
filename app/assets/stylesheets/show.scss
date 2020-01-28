@@ -1,0 +1,36 @@
+.app_new__contents__right__show-contents{
+  margin-top: 30px;
+  &__title{
+    font-size: 30px;
+  }
+  &__data{
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 30px;
+    &__left{
+      width: 40%;
+      &__title{
+        font-size: 20px;
+        margin-bottom: 10px;
+      }
+      &__list{
+        display: flex;
+        justify-content: space-between;
+        margin-left: 10px;
+      }
+    }
+    &__right{
+      width: 40%;
+      &__title{
+        font-size: 20px;
+        margin-bottom: 10px;
+      }
+      &__list{
+        display: flex;
+        justify-content: space-between;
+        margin-left: 10px;
+      }
+    }
+  }
+}

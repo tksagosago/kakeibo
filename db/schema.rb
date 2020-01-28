@@ -15,6 +15,7 @@ ActiveRecord::Schema.define(version: 2020_01_25_062743) do
   create_table "expenditures", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "expsubject", null: false
     t.integer "expamount", null: false
+    t.string "others"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

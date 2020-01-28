@@ -10,3 +10,31 @@
 
   .app_new__contents__right
     = render partial: 'right-main'
+
+    .app_new__contents__right__show-contents
+      .app_new__contents__right__show-contents__title
+        詳細
+      .app_new__contents__right__show-contents__data
+        .app_new__contents__right__show-contents__data__left
+          .app_new__contents__right__show-contents__data__left__title
+            その他
+          - @others.each do |others|
+            .app_new__contents__right__show-contents__data__left__list
+              .app_new__contents__righ__show-contentst__data__left__list__subject
+                = others.others
+              .app_new__contents__right__show-contents__data__left__list__amount
+                ¥
+                = others.expamount
+                円
+        
+        .app_new__contents__right__show-contents__data__right
+          .app_new__contents__right__show-contents__data__right__title
+            課金
+          - @billing.each do |billing|
+            .app_new__contents__right__show-contents__data__right__list
+              .app_new__contents__right__show-contents__data__right__list__subject
+                = billing.others
+              .app_new__contents__right__show-contents__data__right__list__amount
+                ¥
+                = billing.expamount
+                円

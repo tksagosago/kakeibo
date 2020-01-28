@@ -3,7 +3,7 @@
     家計簿
   .app_header__link
     = link_to root_path do
-      過去分へ
+      データ一覧へ
 
 .app_new__contents
   = render partial: 'left-main'
@@ -22,9 +22,11 @@
           .app_new__contents__right__bottom__contents__spending__form
             = form_with(model: @expenditure, url: "/account/expenditure_create", local: true) do |f|
               .app_new__contents__right__bottom__contents__spending__form__expense
-                = f.select :expsubject, [["食費", "食費"],["日用品費", "日用品費"],["水道光熱費", "水道光熱費"],["課金", "課金"],["娯楽費", "娯楽費"],["家賃", "家賃"],["通信費", "通信費"],["奨学金", "奨学金"],["その他", "その他"]], {prompt: "費目を選択"}, class:"app_new__contents__right__bottom__contents__spending__form__expense__form"
+                = f.select :expsubject, [["食費", "食費"],["日用品費", "日用品費"],["水道光熱費", "水道光熱費"],["課金", "課金"],["娯楽費", "娯楽費"],["家賃", "家賃"],["通信費", "通信費"],["奨学金", "奨学金"],["その他", "その他"]], {prompt: "費目を選択"}, class:"app_new__contents__right__bottom__contents__spending__form__expense__form", id: "ex_sub"
               .app_new__contents__right__bottom__contents__spending__form__amount
-                = f.text_field :expamount, placeholder: "金額をを入力", class:"app_new__contents__right__bottom__contents__spending__form__amount__form"
+                = f.text_field :expamount, placeholder: "金額を入力", class:"app_new__contents__right__bottom__contents__spending__form__amount__form"
+              .app_new__contents__right__bottom__contents__spending__form__other
+                = f.text_field :others, placeholder: "費用名を入力", class:"app_new__contents__right__bottom__contents__spending__form__other__form hidden"
               .app_new__contents__right__bottom__contents__spending__form__submit
                 =f.submit class: "app_new__contents__right__bottom__contents__spending__form__submit__button", value: "登録" ;
             

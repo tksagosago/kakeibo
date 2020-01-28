@@ -34,6 +34,9 @@ class AccountController < ApplicationController
   def show
   end
 
+  def show_other
+  end
+
 
   private
   def income_params
@@ -41,7 +44,7 @@ class AccountController < ApplicationController
   end
 
   def expenditure_params
-    params.permit(:expsubject, :expamount)
+    params.permit(:expsubject, :expamount, :others)
   end
 
   def set_date
