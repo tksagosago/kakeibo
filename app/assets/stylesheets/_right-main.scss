@@ -1,7 +1,7 @@
 .app_new__contents{
   &__right{
-    padding: 0px 30px;
-    width: 60%;
+    width: 820px;
+    float: left;
     &__contents{
       display: flex;
     }
@@ -10,7 +10,7 @@
     }
     &__list{
       font-size: 20px;
-      width: 40%;
+      width: 317px;
       &__food{
         display: flex;
         justify-content: space-between;
@@ -79,6 +79,37 @@
         display: flex;
         justify-content: space-between;
         margin: 5px;
+      }
+    }
+    &__calc{
+      margin-top: 60px;
+      padding: 20px;
+      border: 1px solid black;
+      &__title{
+        font-size: 30px;
+        font-weight: bold;
+        margin-bottom: 10px;
+        text-align: center;
+        color: coral;
+      }
+      &__forms{
+        &__input1{
+          height: 30px;
+          width: 90%;
+          padding: 5px;
+          margin: 0px 0px 10px 10px;
+        }
+        &__input2{
+          height: 30px;
+          width: 90%;
+          padding: 5px;
+          margin: 0px 0px 10px 10px;
+        }
+        &__output{
+          border-top: 1px solid black;
+          text-align: center;
+          font-size: 30px;
+        }
       }
     }
   }

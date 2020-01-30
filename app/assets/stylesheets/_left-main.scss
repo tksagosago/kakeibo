@@ -1,9 +1,8 @@
 .app_new__contents{
-  display: flex;
-  padding: 30px;
   &__left{
-    width: 40%;
+    width: 500px;
     height: 100%;
+    float: left;
     &__period{
       font-size: 30px;
       color: brown;
