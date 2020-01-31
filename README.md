@@ -15,6 +15,9 @@ javascriptで簡単な電卓機能を実装し、手軽にちょっとした計�
 ## 📕Demo
 https://gyazo.com/378004efe2a96fd842027a59b1144954
 
+## 🖥デモサイト⬇︎
+https://simple-kakeibo.herokuapp.com/  
+
 ## 📕Usage
 アプリには以下の機能があります。  
 1.収支の登録、自動計算機能  
