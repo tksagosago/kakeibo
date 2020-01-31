@@ -34,6 +34,12 @@ class AccountController < ApplicationController
   def show
   end
 
+  def destroy
+    @exp = Expenditure.find(params[:id])
+    @exp.destroy
+    redirect_to account_path(@exp.created_at, '%Y%m')
+  end
+
 
   private
   def income_params

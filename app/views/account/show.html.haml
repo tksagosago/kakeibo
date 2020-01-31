@@ -20,21 +20,30 @@
             その他
           - @others.each do |others|
             .app_new__contents__right__show-contents__data__left__list
-              .app_new__contents__righ__show-contentst__data__left__list__subject
-                = others.others
-              .app_new__contents__right__show-contents__data__left__list__amount
-                ¥
-                = others.expamount
-                円
+              .app_new__contents__right__show-contents__data__left__list__data
+                .app_new__contents__righ__show-contentst__data__left__list__data__subject
+                  = others.others
+                .app_new__contents__right__show-contents__data__left__list__data__amount
+                  ¥
+                  = others.expamount
+                  円
+              .app_new__contents__righ__show-contentst__data__left__list__delete
+                = link_to account_path(others.id), method: :delete do
+                  削除
         
         .app_new__contents__right__show-contents__data__right
           .app_new__contents__right__show-contents__data__right__title
             課金
           - @billing.each do |billing|
             .app_new__contents__right__show-contents__data__right__list
-              .app_new__contents__right__show-contents__data__right__list__subject
-                = billing.others
-              .app_new__contents__right__show-contents__data__right__list__amount
-                ¥
-                = billing.expamount
-                円
+              .app_new__contents__right__show-contents__data__right__list__data
+                .app_new__contents__right__show-contents__data__right__list__data__subject
+                  = billing.others
+                .app_new__contents__right__show-contents__data__right__list__data__amount
+                  ¥
+                  = billing.expamount
+                  円
+              .app_new__contents__right__show-contents__data__right__list__delelt
+                = link_to account_path(billing.id), method: :delete do
+                  削除
+              
